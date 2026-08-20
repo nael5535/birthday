@@ -277,11 +277,10 @@ function BirthdayPage() {
 
       <section className="story-section note-section" id="letter" data-testid="section-letter">
         <div className="note-copy">
-          <span className="section-kicker">Chapter 03 / A note in the margin</span>
-          <h2 data-testid="text-note-title">I want you to know<br />one thing.</h2>
-          <p data-testid="text-note-copy">
-            You make ordinary days taste different. I love your tiny details, your sudden laugh,
-            and every time the world feels lighter because I am next to you. This whole box is just my way of saying: I am grateful that you are you.
+          <span className="section-kicker">Chapter 03 / The letter</span>
+          <h2 data-testid="text-note-title">Two years with you…<br /><span className="warm">and still not enough words.</span></h2>
+          <p className="letter-intro" data-testid="text-note-copy">
+            Some feelings are too big for one birthday card. So I made you a whole little world instead.
           </p>
           <button className="sticker-button" type="button" onClick={wiggleSticker} data-testid="button-wiggle-sticker">
             <span className={`sticker ${isStickerWiggling ? 'is-wiggling' : ''}`}>
@@ -294,11 +293,26 @@ function BirthdayPage() {
           </button>
         </div>
 
-        <div className="quote-card" data-testid="card-love-quote">
-          <blockquote>
-            No matter how much you grow, you will always be my tiny little Labububu — the sweetest thing God ever created.
-          </blockquote>
-          <cite>— from me, with every bit of love I have</cite>
+        <div className="main-letter" data-testid="card-love-quote">
+          <div className="letter-topline">
+            <span>05.04.2025 → 22.08.2026</span>
+            <Heart size={16} fill="currentColor" aria-hidden="true" />
+          </div>
+          <div className="letter-body">
+            <p>Two years with you…</p>
+            <p>and somehow, I still don’t have enough words to explain how lucky I feel to have you in my life.</p>
+            <p>You are one of the most beautiful things that ever happened to me.</p>
+            <p>I hope you achieve every dream you have, and I hope life gives you all the happiness you deserve.</p>
+            <p>I hope you always keep that beautiful smile, because you don’t even know how much it means to me and how much brighter my days become when I see it.</p>
+            <p className="letter-emphasis">I’ll love you now, tomorrow, and forever.</p>
+            <p>And every single day, I’ll be more and more proud of you, proud of the person you are and the person you’re becoming.</p>
+            <p>Thank you for every moment, every laugh, every memory, and for simply being you.</p>
+            <p>Two years ago, we started writing our story…<br />and I still want every next page to be with you. <span aria-label="heart">❤️</span></p>
+            <p className="letter-emphasis">And NEVER forget!!! 😭</p>
+            <p className="letter-labububu">No matter how much you grow up,<br />you’ll always be my little LABUUBUBBUB. 🥹❤️</p>
+            <p className="letter-signoff">I love you sooo much my butterfly</p>
+          </div>
+          <cite>— with all my love, always</cite>
         </div>
       </section>
 

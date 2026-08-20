@@ -649,12 +649,111 @@ button {
   margin: 0.6rem 0 1.3rem;
 }
 
+.note-copy h2 .warm {
+  color: hsl(var(--accent));
+}
+
 .note-copy p {
   color: hsl(var(--muted-foreground));
   font-size: 0.82rem;
   line-height: 2.1;
   margin: 0;
   max-width: 29rem;
+}
+
+.letter-intro {
+  max-width: 24rem !important;
+}
+
+.main-letter {
+  background:
+    linear-gradient(transparent 2.35rem, rgba(54, 29, 49, 0.07) 2.4rem),
+    #f9ead2;
+  background-size: 100% 2.4rem;
+  border: 1px solid rgba(54, 29, 49, 0.16);
+  border-radius: 1.5rem;
+  box-shadow: 12px 14px 0 hsl(var(--primary)), var(--shadow-ink);
+  color: hsl(var(--primary));
+  padding: 1.4rem 1.35rem 1.7rem;
+  position: relative;
+  transform: rotate(1.4deg);
+}
+
+.main-letter::before {
+  border: 1px solid rgba(54, 29, 49, 0.18);
+  border-radius: 1rem;
+  content: '';
+  inset: 0.65rem;
+  pointer-events: none;
+  position: absolute;
+}
+
+.letter-topline {
+  align-items: center;
+  color: rgba(54, 29, 49, 0.55);
+  display: flex;
+  font-family: var(--app-font-mono);
+  font-size: 0.58rem;
+  justify-content: space-between;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.letter-topline svg {
+  color: hsl(var(--accent));
+}
+
+.letter-body {
+  font-size: 0.78rem;
+  line-height: 1.95;
+  position: relative;
+}
+
+.letter-body p {
+  color: rgba(54, 29, 49, 0.78);
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0 0 1rem;
+}
+
+.letter-body p:first-child {
+  color: hsl(var(--primary));
+  font-family: var(--app-font-serif);
+  font-size: clamp(2rem, 8vw, 3.2rem);
+  line-height: 1;
+  margin-bottom: 1.4rem;
+}
+
+.letter-body .letter-emphasis {
+  color: hsl(var(--accent));
+  font-family: var(--app-font-serif);
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.letter-body .letter-labububu {
+  color: hsl(var(--primary));
+  font-family: var(--app-font-serif);
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.letter-body .letter-signoff {
+  color: hsl(var(--primary));
+  font-family: var(--app-font-serif);
+  font-size: 1.75rem;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.main-letter cite {
+  color: rgba(54, 29, 49, 0.55);
+  display: block;
+  font-size: 0.62rem;
+  font-style: normal;
+  margin-top: 1.3rem;
+  position: relative;
 }
 
 .quote-card {
