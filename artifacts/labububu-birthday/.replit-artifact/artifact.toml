@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "صندوق لبوبوب السري"
+description = "تجربة عيد ميلاد عربية تفاعلية ولطيفة لشريكة المستخدم، تحكي قصة بدأت في 5 أبريل 2025 وتنتهي باحتفال 22 أغسطس 2026 مع ذكريات وصور ومفاجآت صغيرة."
+version = "1.0.0"
+id = "artifacts/labububu-birthday"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18170
+
+[services.development]
+run = "pnpm --filter @workspace/labububu-birthday run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/labububu-birthday", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/labububu-birthday/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18170"
+BASE_PATH = "/"
